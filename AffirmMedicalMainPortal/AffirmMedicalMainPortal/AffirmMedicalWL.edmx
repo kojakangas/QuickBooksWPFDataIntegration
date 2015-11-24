@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="affirmmedicalweightlossModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="affirmmedicalweightlossModelStoreContainer">
+          <EntitySet Name="account" EntityType="affirmmedicalweightlossModel.Store.account" store:Type="Tables" Schema="affirmmedicalweightloss" />
+          <EntitySet Name="company" EntityType="affirmmedicalweightlossModel.Store.company" store:Type="Tables" Schema="affirmmedicalweightloss" />
+          <EntitySet Name="customer" EntityType="affirmmedicalweightlossModel.Store.customer" store:Type="Tables" Schema="affirmmedicalweightloss" />
+        </EntityContainer>
+        <EntityType Name="account">
+          <Key>
+            <PropertyRef Name="ListID" />
+          </Key>
+          <Property Name="ListID" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="TimeCreated" Type="varchar" MaxLength="255" />
+          <Property Name="TimeModified" Type="varchar" MaxLength="255" />
+          <Property Name="EditSequence" Type="varchar" MaxLength="255" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="FullName" Type="varchar" MaxLength="255" />
+          <Property Name="IsActive" Type="varchar" MaxLength="255" />
+          <Property Name="ParentRef_ListID" Type="varchar" MaxLength="255" />
+          <Property Name="ParentRef_FullName" Type="varchar" MaxLength="255" />
+          <Property Name="Sublevel" Type="int" />
+          <Property Name="AccountType" Type="varchar" MaxLength="255" />
+          <Property Name="DetailAccountType" Type="varchar" MaxLength="255" />
+          <Property Name="AccountNumber" Type="varchar" MaxLength="255" />
+          <Property Name="BankNumber" Type="varchar" MaxLength="255" />
+          <Property Name="LastCheckNumber" Type="varchar" MaxLength="255" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="Balance" Type="decimal" Precision="15" Scale="5" />
+          <Property Name="TotalBalance" Type="decimal" Precision="15" Scale="5" />
+          <Property Name="CashFlowClassification" Type="varchar" MaxLength="255" />
+          <Property Name="SpecialAccountType" Type="varchar" MaxLength="255" />
+          <Property Name="SalesTaxCodeRef_ListID" Type="varchar" MaxLength="255" />
+          <Property Name="SalesTaxCodeRef_FullName" Type="varchar" MaxLength="255" />
+          <Property Name="IsTaxAccount" Type="varchar" MaxLength="255" />
+          <Property Name="TaxLineID" Type="int" />
+          <Property Name="TaxLineInfo" Type="varchar" MaxLength="255" />
+          <Property Name="CurrencyRef_ListID" Type="varchar" MaxLength="255" />
+          <Property Name="CurrencyRef_FullName" Type="varchar" MaxLength="255" />
+          <Property Name="CustomField1" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField2" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField3" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField4" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField5" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField6" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField7" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField8" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField9" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField10" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField11" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField12" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField13" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField14" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField15" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="company">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+          </Key>
+          <Property Name="IsSampleCompany" Type="varchar" MaxLength="255" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="255" />
+          <Property Name="LegalCompanyName" Type="varchar" MaxLength="255" />
+          <Property Name="Address_Addr1" Type="varchar" MaxLength="255" />
+          <Property Name="Address_Addr2" Type="varchar" MaxLength="255" />
+          <Property Name="Address_Addr3" Type="varchar" MaxLength="255" />
+          <Property Name="Address_Addr4" Type="varchar" MaxLength="255" />
+          <Property Name="Address_Addr5" Type="varchar" MaxLength="255" />
+          <Property Name="Address_City" Type="varchar" MaxLength="255" />
+          <Property Name="Address_State" Type="varchar" MaxLength="255" />
+          <Property Name="Address_PostalCode" Type="varchar" MaxLength="255" />
+          <Property Name="Address_Country" Type="varchar" MaxLength="255" />
+          <Property Name="Address_Note" Type="varchar" MaxLength="255" />
+          <Property Name="LegalAddress_Addr1" Type="varchar" MaxLength="255" />
+          <Property Name="LegalAddress_Addr2" Type="varchar" MaxLength="255" />
+          <Property Name="LegalAddress_Addr3" Type="varchar" MaxLength="255" />
+          <Property Name="LegalAddress_Addr4" Type="varchar" MaxLength="255" />
+          <Property Name="LegalAddress_Addr5" Type="varchar" MaxLength="255" />
+          <Property Name="LegalAddress_City" Type="varchar" MaxLength="255" />
+          <Property Name="LegalAddress_State" Type="varchar" MaxLength="255" />
+          <Property Name="LegalAddress_PostalCode" Type="varchar" MaxLength="255" />
+          <Property Name="LegalAddress_Country" Type="varchar" MaxLength="255" />
+          <Property Name="LegalAddress_Note" Type="varchar" MaxLength="255" />
+          <Property Name="CompanyAddressForCustomer_Addr1" Type="varchar" MaxLength="255" />
+          <Property Name="CompanyAddressForCustomer_Addr2" Type="varchar" MaxLength="255" />
+          <Property Name="CompanyAddressForCustomer_Addr3" Type="varchar" MaxLength="255" />
+          <Property Name="CompanyAddressForCustomer_Addr4" Type="varchar" MaxLength="255" />
+          <Property Name="CompanyAddressForCustomer_Addr5" Type="varchar" MaxLength="255" />
+          <Property Name="CompanyAddressForCustomer_City" Type="varchar" MaxLength="255" />
+          <Property Name="CompanyAddressForCustomer_State" Type="varchar" MaxLength="255" />
+          <Property Name="CompanyAddressForCustomer_PostalCode" Type="varchar" MaxLength="255" />
+          <Property Name="CompanyAddressForCustomer_Country" Type="varchar" MaxLength="255" />
+          <Property Name="CompanyAddressForCustomer_Note" Type="varchar" MaxLength="255" />
+          <Property Name="Phone" Type="varchar" MaxLength="255" />
+          <Property Name="Fax" Type="varchar" MaxLength="255" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="CompanyEmailForCustomer" Type="varchar" MaxLength="255" />
+          <Property Name="CompanyWebSite" Type="varchar" MaxLength="255" />
+          <Property Name="FirstMonthFiscalYear" Type="varchar" MaxLength="255" />
+          <Property Name="FirstMonthIncomeTaxYear" Type="varchar" MaxLength="255" />
+          <Property Name="CompanyType" Type="varchar" MaxLength="255" />
+          <Property Name="EIN" Type="varchar" MaxLength="255" />
+          <Property Name="TaxForm" Type="varchar" MaxLength="255" />
+          <Property Name="CustomField1" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField2" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField3" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField4" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField5" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField6" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField7" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField8" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField9" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField10" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField11" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField12" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField13" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField14" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField15" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="10" />
+          <Property Name="CompanyID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="customer">
+          <Key>
+            <PropertyRef Name="ListID" />
+          </Key>
+          <Property Name="ListID" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="TimeCreated" Type="varchar" MaxLength="255" />
+          <Property Name="TimeModified" Type="varchar" MaxLength="255" />
+          <Property Name="EditSequence" Type="varchar" MaxLength="255" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="FullName" Type="varchar" MaxLength="255" />
+          <Property Name="IsActive" Type="varchar" MaxLength="255" />
+          <Property Name="ClassRef_ListID" Type="varchar" MaxLength="255" />
+          <Property Name="ClassRef_FullName" Type="varchar" MaxLength="255" />
+          <Property Name="ParentRef_ListID" Type="varchar" MaxLength="255" />
+          <Property Name="ParentRef_FullName" Type="varchar" MaxLength="255" />
+          <Property Name="Sublevel" Type="int" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="255" />
+          <Property Name="Salutation" Type="varchar" MaxLength="255" />
+          <Property Name="FirstName" Type="varchar" MaxLength="255" />
+          <Property Name="MiddleName" Type="varchar" MaxLength="255" />
+          <Property Name="LastName" Type="varchar" MaxLength="255" />
+          <Property Name="Suffix" Type="varchar" MaxLength="255" />
+          <Property Name="BillAddress_Addr1" Type="varchar" MaxLength="255" />
+          <Property Name="BillAddress_Addr2" Type="varchar" MaxLength="255" />
+          <Property Name="BillAddress_Addr3" Type="varchar" MaxLength="255" />
+          <Property Name="BillAddress_Addr4" Type="varchar" MaxLength="255" />
+          <Property Name="BillAddress_Addr5" Type="varchar" MaxLength="255" />
+          <Property Name="BillAddress_City" Type="varchar" MaxLength="255" />
+          <Property Name="BillAddress_State" Type="varchar" MaxLength="255" />
+          <Property Name="BillAddress_PostalCode" Type="varchar" MaxLength="255" />
+          <Property Name="BillAddress_Country" Type="varchar" MaxLength="255" />
+          <Property Name="BillAddress_Note" Type="varchar" MaxLength="255" />
+          <Property Name="ShipAddress_Addr1" Type="varchar" MaxLength="255" />
+          <Property Name="ShipAddress_Addr2" Type="varchar" MaxLength="255" />
+          <Property Name="ShipAddress_Addr3" Type="varchar" MaxLength="255" />
+          <Property Name="ShipAddress_Addr4" Type="varchar" MaxLength="255" />
+          <Property Name="ShipAddress_Addr5" Type="varchar" MaxLength="255" />
+          <Property Name="ShipAddress_City" Type="varchar" MaxLength="255" />
+          <Property Name="ShipAddress_State" Type="varchar" MaxLength="255" />
+          <Property Name="ShipAddress_PostalCode" Type="varchar" MaxLength="255" />
+          <Property Name="ShipAddress_Country" Type="varchar" MaxLength="255" />
+          <Property Name="ShipAddress_Note" Type="varchar" MaxLength="255" />
+          <Property Name="PrintAs" Type="varchar" MaxLength="255" />
+          <Property Name="Phone" Type="varchar" MaxLength="255" />
+          <Property Name="Mobile" Type="varchar" MaxLength="255" />
+          <Property Name="Pager" Type="varchar" MaxLength="255" />
+          <Property Name="AltPhone" Type="varchar" MaxLength="255" />
+          <Property Name="Fax" Type="varchar" MaxLength="255" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="Cc" Type="varchar" MaxLength="255" />
+          <Property Name="Contact" Type="varchar" MaxLength="255" />
+          <Property Name="AltContact" Type="varchar" MaxLength="255" />
+          <Property Name="CustomerTypeRef_ListID" Type="varchar" MaxLength="255" />
+          <Property Name="CustomerTypeRef_FullName" Type="varchar" MaxLength="255" />
+          <Property Name="TermsRef_ListID" Type="varchar" MaxLength="255" />
+          <Property Name="TermsRef_FullName" Type="varchar" MaxLength="255" />
+          <Property Name="SalesRepRef_ListID" Type="varchar" MaxLength="255" />
+          <Property Name="SalesRepRef_FullName" Type="varchar" MaxLength="255" />
+          <Property Name="Balance" Type="decimal" Precision="15" Scale="5" />
+          <Property Name="TotalBalance" Type="decimal" Precision="15" Scale="5" />
+          <Property Name="SalesTaxCodeRef_ListID" Type="varchar" MaxLength="255" />
+          <Property Name="SalesTaxCodeRef_FullName" Type="varchar" MaxLength="255" />
+          <Property Name="ItemSalesTaxRef_ListID" Type="varchar" MaxLength="255" />
+          <Property Name="ItemSalesTaxRef_FullName" Type="varchar" MaxLength="255" />
+          <Property Name="SalesTaxCountry" Type="varchar" MaxLength="255" />
+          <Property Name="ResaleNumber" Type="varchar" MaxLength="255" />
+          <Property Name="AccountNumber" Type="varchar" MaxLength="255" />
+          <Property Name="CreditLimit" Type="decimal" Precision="15" Scale="5" />
+          <Property Name="PreferredPaymentMethodRef_ListID" Type="varchar" MaxLength="255" />
+          <Property Name="PreferredPaymentMethodRef_FullName" Type="varchar" MaxLength="255" />
+          <Property Name="CreditCardNumber" Type="varchar" MaxLength="255" />
+          <Property Name="ExpirationMonth" Type="int" />
+          <Property Name="ExpirationYear" Type="int" />
+          <Property Name="NameOnCard" Type="varchar" MaxLength="255" />
+          <Property Name="CreditCardAddress" Type="varchar" MaxLength="255" />
+          <Property Name="CreditCardPostalCode" Type="varchar" MaxLength="255" />
+          <Property Name="JobStatus" Type="varchar" MaxLength="255" />
+          <Property Name="JobStartDate" Type="datetime" />
+          <Property Name="JobProjectedEndDate" Type="datetime" />
+          <Property Name="JobEndDate" Type="datetime" />
+          <Property Name="JobDesc" Type="varchar" MaxLength="255" />
+          <Property Name="JobTypeRef_ListID" Type="varchar" MaxLength="255" />
+          <Property Name="JobTypeRef_FullName" Type="varchar" MaxLength="255" />
+          <Property Name="Notes" Type="longtext" />
+          <Property Name="PriceLevelRef_ListID" Type="varchar" MaxLength="255" />
+          <Property Name="PriceLevelRef_FullName" Type="varchar" MaxLength="255" />
+          <Property Name="TaxRegistrationNumber" Type="varchar" MaxLength="255" />
+          <Property Name="CurrencyRef_ListID" Type="varchar" MaxLength="255" />
+          <Property Name="CurrencyRef_FullName" Type="varchar" MaxLength="255" />
+          <Property Name="IsStatementWithParent" Type="varchar" MaxLength="255" />
+          <Property Name="PreferredDeliveryMethod" Type="varchar" MaxLength="255" />
+          <Property Name="Birthday" Type="varchar" MaxLength="50" />
+          <Property Name="Text" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField3" Type="datetime" />
+          <Property Name="CustomField4" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField5" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField6" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField7" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField8" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField9" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField10" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField11" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField12" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField13" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField14" Type="varchar" MaxLength="50" />
+          <Property Name="CustomField15" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="10" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="affirmmedicalweightlossModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="affirmmedicalweightlossEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="accounts" EntityType="affirmmedicalweightlossModel.account" />
+          <EntitySet Name="companies" EntityType="affirmmedicalweightlossModel.company" />
+          <EntitySet Name="customers" EntityType="affirmmedicalweightlossModel.customer" />
+        </EntityContainer>
+        <EntityType Name="account">
+          <Key>
+            <PropertyRef Name="ListID" />
+          </Key>
+          <Property Type="String" Name="ListID" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TimeCreated" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TimeModified" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EditSequence" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IsActive" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ParentRef_ListID" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ParentRef_FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Sublevel" />
+          <Property Type="String" Name="AccountType" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DetailAccountType" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AccountNumber" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BankNumber" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastCheckNumber" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Balance" />
+          <Property Type="Decimal" Name="TotalBalance" />
+          <Property Type="String" Name="CashFlowClassification" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SpecialAccountType" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SalesTaxCodeRef_ListID" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SalesTaxCodeRef_FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IsTaxAccount" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TaxLineID" />
+          <Property Type="String" Name="TaxLineInfo" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CurrencyRef_ListID" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CurrencyRef_FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField1" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField2" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField3" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField4" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField5" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField6" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField7" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField8" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField9" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField10" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField11" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField12" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField13" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField14" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField15" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Status" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="company">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+          </Key>
+          <Property Type="String" Name="IsSampleCompany" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LegalCompanyName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_Addr1" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_Addr2" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_Addr3" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_Addr4" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_Addr5" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_City" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_State" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_PostalCode" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_Country" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_Note" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LegalAddress_Addr1" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LegalAddress_Addr2" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LegalAddress_Addr3" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LegalAddress_Addr4" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LegalAddress_Addr5" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LegalAddress_City" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LegalAddress_State" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LegalAddress_PostalCode" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LegalAddress_Country" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LegalAddress_Note" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyAddressForCustomer_Addr1" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyAddressForCustomer_Addr2" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyAddressForCustomer_Addr3" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyAddressForCustomer_Addr4" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyAddressForCustomer_Addr5" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyAddressForCustomer_City" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyAddressForCustomer_State" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyAddressForCustomer_PostalCode" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyAddressForCustomer_Country" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyAddressForCustomer_Note" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Fax" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyEmailForCustomer" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyWebSite" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FirstMonthFiscalYear" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FirstMonthIncomeTaxYear" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyType" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EIN" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TaxForm" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField1" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField2" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField3" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField4" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField5" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField6" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField7" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField8" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField9" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField10" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField11" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField12" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField13" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField14" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField15" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Status" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CompanyID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="customer">
+          <Key>
+            <PropertyRef Name="ListID" />
+          </Key>
+          <Property Type="String" Name="ListID" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TimeCreated" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TimeModified" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EditSequence" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IsActive" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ClassRef_ListID" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ClassRef_FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ParentRef_ListID" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ParentRef_FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Sublevel" />
+          <Property Type="String" Name="CompanyName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Salutation" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FirstName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MiddleName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Suffix" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BillAddress_Addr1" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BillAddress_Addr2" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BillAddress_Addr3" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BillAddress_Addr4" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BillAddress_Addr5" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BillAddress_City" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BillAddress_State" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BillAddress_PostalCode" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BillAddress_Country" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BillAddress_Note" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ShipAddress_Addr1" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ShipAddress_Addr2" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ShipAddress_Addr3" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ShipAddress_Addr4" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ShipAddress_Addr5" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ShipAddress_City" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ShipAddress_State" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ShipAddress_PostalCode" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ShipAddress_Country" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ShipAddress_Note" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PrintAs" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mobile" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Pager" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AltPhone" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Fax" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Cc" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Contact" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AltContact" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomerTypeRef_ListID" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomerTypeRef_FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TermsRef_ListID" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TermsRef_FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SalesRepRef_ListID" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SalesRepRef_FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Balance" />
+          <Property Type="Decimal" Name="TotalBalance" />
+          <Property Type="String" Name="SalesTaxCodeRef_ListID" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SalesTaxCodeRef_FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ItemSalesTaxRef_ListID" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ItemSalesTaxRef_FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SalesTaxCountry" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ResaleNumber" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AccountNumber" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="CreditLimit" />
+          <Property Type="String" Name="PreferredPaymentMethodRef_ListID" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PreferredPaymentMethodRef_FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreditCardNumber" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ExpirationMonth" />
+          <Property Type="Int32" Name="ExpirationYear" />
+          <Property Type="String" Name="NameOnCard" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreditCardAddress" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreditCardPostalCode" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JobStatus" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="JobStartDate" />
+          <Property Type="DateTime" Name="JobProjectedEndDate" />
+          <Property Type="DateTime" Name="JobEndDate" />
+          <Property Type="String" Name="JobDesc" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JobTypeRef_ListID" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="JobTypeRef_FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Notes" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PriceLevelRef_ListID" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PriceLevelRef_FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TaxRegistrationNumber" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CurrencyRef_ListID" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CurrencyRef_FullName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IsStatementWithParent" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PreferredDeliveryMethod" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CustomField3" />
+          <Property Type="String" Name="CustomField4" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField5" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField6" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField7" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField8" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField9" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField10" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField11" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField12" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField13" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField14" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomField15" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Status" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Birthday" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Text" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="affirmmedicalweightlossModelStoreContainer" CdmEntityContainer="affirmmedicalweightlossEntities">
+          <EntitySetMapping Name="accounts">
+            <EntityTypeMapping TypeName="affirmmedicalweightlossModel.account">
+              <MappingFragment StoreEntitySet="account">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CustomField15" ColumnName="CustomField15" />
+                <ScalarProperty Name="CustomField14" ColumnName="CustomField14" />
+                <ScalarProperty Name="CustomField13" ColumnName="CustomField13" />
+                <ScalarProperty Name="CustomField12" ColumnName="CustomField12" />
+                <ScalarProperty Name="CustomField11" ColumnName="CustomField11" />
+                <ScalarProperty Name="CustomField10" ColumnName="CustomField10" />
+                <ScalarProperty Name="CustomField9" ColumnName="CustomField9" />
+                <ScalarProperty Name="CustomField8" ColumnName="CustomField8" />
+                <ScalarProperty Name="CustomField7" ColumnName="CustomField7" />
+                <ScalarProperty Name="CustomField6" ColumnName="CustomField6" />
+                <ScalarProperty Name="CustomField5" ColumnName="CustomField5" />
+                <ScalarProperty Name="CustomField4" ColumnName="CustomField4" />
+                <ScalarProperty Name="CustomField3" ColumnName="CustomField3" />
+                <ScalarProperty Name="CustomField2" ColumnName="CustomField2" />
+                <ScalarProperty Name="CustomField1" ColumnName="CustomField1" />
+                <ScalarProperty Name="CurrencyRef_FullName" ColumnName="CurrencyRef_FullName" />
+                <ScalarProperty Name="CurrencyRef_ListID" ColumnName="CurrencyRef_ListID" />
+                <ScalarProperty Name="TaxLineInfo" ColumnName="TaxLineInfo" />
+                <ScalarProperty Name="TaxLineID" ColumnName="TaxLineID" />
+                <ScalarProperty Name="IsTaxAccount" ColumnName="IsTaxAccount" />
+                <ScalarProperty Name="SalesTaxCodeRef_FullName" ColumnName="SalesTaxCodeRef_FullName" />
+                <ScalarProperty Name="SalesTaxCodeRef_ListID" ColumnName="SalesTaxCodeRef_ListID" />
+                <ScalarProperty Name="SpecialAccountType" ColumnName="SpecialAccountType" />
+                <ScalarProperty Name="CashFlowClassification" ColumnName="CashFlowClassification" />
+                <ScalarProperty Name="TotalBalance" ColumnName="TotalBalance" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LastCheckNumber" ColumnName="LastCheckNumber" />
+                <ScalarProperty Name="BankNumber" ColumnName="BankNumber" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="DetailAccountType" ColumnName="DetailAccountType" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="Sublevel" ColumnName="Sublevel" />
+                <ScalarProperty Name="ParentRef_FullName" ColumnName="ParentRef_FullName" />
+                <ScalarProperty Name="ParentRef_ListID" ColumnName="ParentRef_ListID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="EditSequence" ColumnName="EditSequence" />
+                <ScalarProperty Name="TimeModified" ColumnName="TimeModified" />
+                <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+                <ScalarProperty Name="ListID" ColumnName="ListID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="companies">
+            <EntityTypeMapping TypeName="affirmmedicalweightlossModel.company">
+              <MappingFragment StoreEntitySet="company">
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CustomField15" ColumnName="CustomField15" />
+                <ScalarProperty Name="CustomField14" ColumnName="CustomField14" />
+                <ScalarProperty Name="CustomField13" ColumnName="CustomField13" />
+                <ScalarProperty Name="CustomField12" ColumnName="CustomField12" />
+                <ScalarProperty Name="CustomField11" ColumnName="CustomField11" />
+                <ScalarProperty Name="CustomField10" ColumnName="CustomField10" />
+                <ScalarProperty Name="CustomField9" ColumnName="CustomField9" />
+                <ScalarProperty Name="CustomField8" ColumnName="CustomField8" />
+                <ScalarProperty Name="CustomField7" ColumnName="CustomField7" />
+                <ScalarProperty Name="CustomField6" ColumnName="CustomField6" />
+                <ScalarProperty Name="CustomField5" ColumnName="CustomField5" />
+                <ScalarProperty Name="CustomField4" ColumnName="CustomField4" />
+                <ScalarProperty Name="CustomField3" ColumnName="CustomField3" />
+                <ScalarProperty Name="CustomField2" ColumnName="CustomField2" />
+                <ScalarProperty Name="CustomField1" ColumnName="CustomField1" />
+                <ScalarProperty Name="TaxForm" ColumnName="TaxForm" />
+                <ScalarProperty Name="EIN" ColumnName="EIN" />
+                <ScalarProperty Name="CompanyType" ColumnName="CompanyType" />
+                <ScalarProperty Name="FirstMonthIncomeTaxYear" ColumnName="FirstMonthIncomeTaxYear" />
+                <ScalarProperty Name="FirstMonthFiscalYear" ColumnName="FirstMonthFiscalYear" />
+                <ScalarProperty Name="CompanyWebSite" ColumnName="CompanyWebSite" />
+                <ScalarProperty Name="CompanyEmailForCustomer" ColumnName="CompanyEmailForCustomer" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="CompanyAddressForCustomer_Note" ColumnName="CompanyAddressForCustomer_Note" />
+                <ScalarProperty Name="CompanyAddressForCustomer_Country" ColumnName="CompanyAddressForCustomer_Country" />
+                <ScalarProperty Name="CompanyAddressForCustomer_PostalCode" ColumnName="CompanyAddressForCustomer_PostalCode" />
+                <ScalarProperty Name="CompanyAddressForCustomer_State" ColumnName="CompanyAddressForCustomer_State" />
+                <ScalarProperty Name="CompanyAddressForCustomer_City" ColumnName="CompanyAddressForCustomer_City" />
+                <ScalarProperty Name="CompanyAddressForCustomer_Addr5" ColumnName="CompanyAddressForCustomer_Addr5" />
+                <ScalarProperty Name="CompanyAddressForCustomer_Addr4" ColumnName="CompanyAddressForCustomer_Addr4" />
+                <ScalarProperty Name="CompanyAddressForCustomer_Addr3" ColumnName="CompanyAddressForCustomer_Addr3" />
+                <ScalarProperty Name="CompanyAddressForCustomer_Addr2" ColumnName="CompanyAddressForCustomer_Addr2" />
+                <ScalarProperty Name="CompanyAddressForCustomer_Addr1" ColumnName="CompanyAddressForCustomer_Addr1" />
+                <ScalarProperty Name="LegalAddress_Note" ColumnName="LegalAddress_Note" />
+                <ScalarProperty Name="LegalAddress_Country" ColumnName="LegalAddress_Country" />
+                <ScalarProperty Name="LegalAddress_PostalCode" ColumnName="LegalAddress_PostalCode" />
+                <ScalarProperty Name="LegalAddress_State" ColumnName="LegalAddress_State" />
+                <ScalarProperty Name="LegalAddress_City" ColumnName="LegalAddress_City" />
+                <ScalarProperty Name="LegalAddress_Addr5" ColumnName="LegalAddress_Addr5" />
+                <ScalarProperty Name="LegalAddress_Addr4" ColumnName="LegalAddress_Addr4" />
+                <ScalarProperty Name="LegalAddress_Addr3" ColumnName="LegalAddress_Addr3" />
+                <ScalarProperty Name="LegalAddress_Addr2" ColumnName="LegalAddress_Addr2" />
+                <ScalarProperty Name="LegalAddress_Addr1" ColumnName="LegalAddress_Addr1" />
+                <ScalarProperty Name="Address_Note" ColumnName="Address_Note" />
+                <ScalarProperty Name="Address_Country" ColumnName="Address_Country" />
+                <ScalarProperty Name="Address_PostalCode" ColumnName="Address_PostalCode" />
+                <ScalarProperty Name="Address_State" ColumnName="Address_State" />
+                <ScalarProperty Name="Address_City" ColumnName="Address_City" />
+                <ScalarProperty Name="Address_Addr5" ColumnName="Address_Addr5" />
+                <ScalarProperty Name="Address_Addr4" ColumnName="Address_Addr4" />
+                <ScalarProperty Name="Address_Addr3" ColumnName="Address_Addr3" />
+                <ScalarProperty Name="Address_Addr2" ColumnName="Address_Addr2" />
+                <ScalarProperty Name="Address_Addr1" ColumnName="Address_Addr1" />
+                <ScalarProperty Name="LegalCompanyName" ColumnName="LegalCompanyName" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="IsSampleCompany" ColumnName="IsSampleCompany" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="customers">
+            <EntityTypeMapping TypeName="affirmmedicalweightlossModel.customer">
+              <MappingFragment StoreEntitySet="customer">
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CustomField15" ColumnName="CustomField15" />
+                <ScalarProperty Name="CustomField14" ColumnName="CustomField14" />
+                <ScalarProperty Name="CustomField13" ColumnName="CustomField13" />
+                <ScalarProperty Name="CustomField12" ColumnName="CustomField12" />
+                <ScalarProperty Name="CustomField11" ColumnName="CustomField11" />
+                <ScalarProperty Name="CustomField10" ColumnName="CustomField10" />
+                <ScalarProperty Name="CustomField9" ColumnName="CustomField9" />
+                <ScalarProperty Name="CustomField8" ColumnName="CustomField8" />
+                <ScalarProperty Name="CustomField7" ColumnName="CustomField7" />
+                <ScalarProperty Name="CustomField6" ColumnName="CustomField6" />
+                <ScalarProperty Name="CustomField5" ColumnName="CustomField5" />
+                <ScalarProperty Name="CustomField4" ColumnName="CustomField4" />
+                <ScalarProperty Name="CustomField3" ColumnName="CustomField3" />
+                <ScalarProperty Name="PreferredDeliveryMethod" ColumnName="PreferredDeliveryMethod" />
+                <ScalarProperty Name="IsStatementWithParent" ColumnName="IsStatementWithParent" />
+                <ScalarProperty Name="CurrencyRef_FullName" ColumnName="CurrencyRef_FullName" />
+                <ScalarProperty Name="CurrencyRef_ListID" ColumnName="CurrencyRef_ListID" />
+                <ScalarProperty Name="TaxRegistrationNumber" ColumnName="TaxRegistrationNumber" />
+                <ScalarProperty Name="PriceLevelRef_FullName" ColumnName="PriceLevelRef_FullName" />
+                <ScalarProperty Name="PriceLevelRef_ListID" ColumnName="PriceLevelRef_ListID" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="JobTypeRef_FullName" ColumnName="JobTypeRef_FullName" />
+                <ScalarProperty Name="JobTypeRef_ListID" ColumnName="JobTypeRef_ListID" />
+                <ScalarProperty Name="JobDesc" ColumnName="JobDesc" />
+                <ScalarProperty Name="JobEndDate" ColumnName="JobEndDate" />
+                <ScalarProperty Name="JobProjectedEndDate" ColumnName="JobProjectedEndDate" />
+                <ScalarProperty Name="JobStartDate" ColumnName="JobStartDate" />
+                <ScalarProperty Name="JobStatus" ColumnName="JobStatus" />
+                <ScalarProperty Name="CreditCardPostalCode" ColumnName="CreditCardPostalCode" />
+                <ScalarProperty Name="CreditCardAddress" ColumnName="CreditCardAddress" />
+                <ScalarProperty Name="NameOnCard" ColumnName="NameOnCard" />
+                <ScalarProperty Name="ExpirationYear" ColumnName="ExpirationYear" />
+                <ScalarProperty Name="ExpirationMonth" ColumnName="ExpirationMonth" />
+                <ScalarProperty Name="CreditCardNumber" ColumnName="CreditCardNumber" />
+                <ScalarProperty Name="PreferredPaymentMethodRef_FullName" ColumnName="PreferredPaymentMethodRef_FullName" />
+                <ScalarProperty Name="PreferredPaymentMethodRef_ListID" ColumnName="PreferredPaymentMethodRef_ListID" />
+                <ScalarProperty Name="CreditLimit" ColumnName="CreditLimit" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="ResaleNumber" ColumnName="ResaleNumber" />
+                <ScalarProperty Name="SalesTaxCountry" ColumnName="SalesTaxCountry" />
+                <ScalarProperty Name="ItemSalesTaxRef_FullName" ColumnName="ItemSalesTaxRef_FullName" />
+                <ScalarProperty Name="ItemSalesTaxRef_ListID" ColumnName="ItemSalesTaxRef_ListID" />
+                <ScalarProperty Name="SalesTaxCodeRef_FullName" ColumnName="SalesTaxCodeRef_FullName" />
+                <ScalarProperty Name="SalesTaxCodeRef_ListID" ColumnName="SalesTaxCodeRef_ListID" />
+                <ScalarProperty Name="TotalBalance" ColumnName="TotalBalance" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="SalesRepRef_FullName" ColumnName="SalesRepRef_FullName" />
+                <ScalarProperty Name="SalesRepRef_ListID" ColumnName="SalesRepRef_ListID" />
+                <ScalarProperty Name="TermsRef_FullName" ColumnName="TermsRef_FullName" />
+                <ScalarProperty Name="TermsRef_ListID" ColumnName="TermsRef_ListID" />
+                <ScalarProperty Name="CustomerTypeRef_FullName" ColumnName="CustomerTypeRef_FullName" />
+                <ScalarProperty Name="CustomerTypeRef_ListID" ColumnName="CustomerTypeRef_ListID" />
+                <ScalarProperty Name="AltContact" ColumnName="AltContact" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="Cc" ColumnName="Cc" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="AltPhone" ColumnName="AltPhone" />
+                <ScalarProperty Name="Pager" ColumnName="Pager" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="PrintAs" ColumnName="PrintAs" />
+                <ScalarProperty Name="ShipAddress_Note" ColumnName="ShipAddress_Note" />
+                <ScalarProperty Name="ShipAddress_Country" ColumnName="ShipAddress_Country" />
+                <ScalarProperty Name="ShipAddress_PostalCode" ColumnName="ShipAddress_PostalCode" />
+                <ScalarProperty Name="ShipAddress_State" ColumnName="ShipAddress_State" />
+                <ScalarProperty Name="ShipAddress_City" ColumnName="ShipAddress_City" />
+                <ScalarProperty Name="ShipAddress_Addr5" ColumnName="ShipAddress_Addr5" />
+                <ScalarProperty Name="ShipAddress_Addr4" ColumnName="ShipAddress_Addr4" />
+                <ScalarProperty Name="ShipAddress_Addr3" ColumnName="ShipAddress_Addr3" />
+                <ScalarProperty Name="ShipAddress_Addr2" ColumnName="ShipAddress_Addr2" />
+                <ScalarProperty Name="ShipAddress_Addr1" ColumnName="ShipAddress_Addr1" />
+                <ScalarProperty Name="BillAddress_Note" ColumnName="BillAddress_Note" />
+                <ScalarProperty Name="BillAddress_Country" ColumnName="BillAddress_Country" />
+                <ScalarProperty Name="BillAddress_PostalCode" ColumnName="BillAddress_PostalCode" />
+                <ScalarProperty Name="BillAddress_State" ColumnName="BillAddress_State" />
+                <ScalarProperty Name="BillAddress_City" ColumnName="BillAddress_City" />
+                <ScalarProperty Name="BillAddress_Addr5" ColumnName="BillAddress_Addr5" />
+                <ScalarProperty Name="BillAddress_Addr4" ColumnName="BillAddress_Addr4" />
+                <ScalarProperty Name="BillAddress_Addr3" ColumnName="BillAddress_Addr3" />
+                <ScalarProperty Name="BillAddress_Addr2" ColumnName="BillAddress_Addr2" />
+                <ScalarProperty Name="BillAddress_Addr1" ColumnName="BillAddress_Addr1" />
+                <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Salutation" ColumnName="Salutation" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="Sublevel" ColumnName="Sublevel" />
+                <ScalarProperty Name="ParentRef_FullName" ColumnName="ParentRef_FullName" />
+                <ScalarProperty Name="ParentRef_ListID" ColumnName="ParentRef_ListID" />
+                <ScalarProperty Name="ClassRef_FullName" ColumnName="ClassRef_FullName" />
+                <ScalarProperty Name="ClassRef_ListID" ColumnName="ClassRef_ListID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="EditSequence" ColumnName="EditSequence" />
+                <ScalarProperty Name="TimeModified" ColumnName="TimeModified" />
+                <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+                <ScalarProperty Name="ListID" ColumnName="ListID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

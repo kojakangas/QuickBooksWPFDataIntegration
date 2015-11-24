@@ -1,0 +1,11 @@
+﻿<Window x:Class="AffirmMedicalMainPortal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Menu" Height="350" Width="525">
+    <Grid>
+
+        <Image Source="Affirmfinalwhitesmall.png" Height="120" Width ="200" VerticalAlignment="Top"></Image>
+
+        <Button Margin="182,125,180,148" Click="ButtonData_Click">Customer Database</Button>
+    </Grid>
+</Window>

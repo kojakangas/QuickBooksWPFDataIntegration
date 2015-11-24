@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AffirmMedicalMainPortal", "AffirmMedicalMainPortal\AffirmMedicalMainPortal.csproj", "{CC8E724A-65DE-4307-8C18-3A4167899669}"
+EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "AffirmMedicalMainPortalDeploy", "AffirmMedicalMainPortalDeploy\AffirmMedicalMainPortalDeploy.isproj", "{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CC8E724A-65DE-4307-8C18-3A4167899669} = {CC8E724A-65DE-4307-8C18-3A4167899669}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		CD_ROM|x86 = CD_ROM|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		DVD-5|Any CPU = DVD-5|Any CPU
+		DVD-5|x86 = DVD-5|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+		SingleImage|Any CPU = SingleImage|Any CPU
+		SingleImage|x86 = SingleImage|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.CD_ROM|x86.ActiveCfg = Release|x86
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.CD_ROM|x86.Build.0 = Release|x86
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.Debug|x86.ActiveCfg = Debug|x86
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.Debug|x86.Build.0 = Debug|x86
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.DVD-5|x86.ActiveCfg = Debug|x86
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.DVD-5|x86.Build.0 = Debug|x86
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.Release|x86.ActiveCfg = Release|x86
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.Release|x86.Build.0 = Release|x86
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.SingleImage|x86.ActiveCfg = Release|x86
+		{CC8E724A-65DE-4307-8C18-3A4167899669}.SingleImage|x86.Build.0 = Release|x86
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.CD_ROM|Any CPU.Build.0 = CD_ROM
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.CD_ROM|x86.ActiveCfg = CD_ROM
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.CD_ROM|x86.Build.0 = CD_ROM
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.Debug|Any CPU.ActiveCfg = DVD-5
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.Debug|Any CPU.Build.0 = DVD-5
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.Debug|x86.ActiveCfg = DVD-5
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.Debug|x86.Build.0 = DVD-5
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.DVD-5|Any CPU.ActiveCfg = DVD-5
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.DVD-5|Any CPU.Build.0 = DVD-5
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.DVD-5|x86.ActiveCfg = DVD-5
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.DVD-5|x86.Build.0 = DVD-5
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.Release|Any CPU.ActiveCfg = SingleImage
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.Release|Any CPU.Build.0 = SingleImage
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.Release|x86.ActiveCfg = SingleImage
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.Release|x86.Build.0 = SingleImage
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.SingleImage|Any CPU.ActiveCfg = SingleImage
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.SingleImage|Any CPU.Build.0 = SingleImage
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.SingleImage|x86.ActiveCfg = SingleImage
+		{306FC2D8-0AB1-4A85-86AD-49A6748FCBAE}.SingleImage|x86.Build.0 = SingleImage
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

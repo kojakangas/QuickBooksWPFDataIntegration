@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="334b43e7b7ac42cc955eaf98d9927cde" Name="Diagram1" ZoomLevel="21">
+        <EntityTypeShape EntityType="affirmmedicalweightlossModel.account" Width="1.5" PointX="1.2892984679384616" PointY="18.960258820541323" />
+        <EntityTypeShape EntityType="affirmmedicalweightlossModel.company" Width="1.5" PointX="7.8782182130395526" PointY="28.286486042796859" />
+        <EntityTypeShape EntityType="affirmmedicalweightlossModel.customer" Width="1.5" PointX="7.2650069888983886" PointY="9.5966330215319218" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

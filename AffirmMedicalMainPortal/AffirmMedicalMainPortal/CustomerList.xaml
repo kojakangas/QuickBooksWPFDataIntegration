@@ -1,0 +1,11 @@
+﻿<Window x:Class="AffirmMedicalMainPortal.CustomerList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CustomerList" Height="300" Width="300">
+    <Grid>
+        <DataGrid Name="allCustomerView"
+                  AlternatingRowBackground="Red">
+            
+        </DataGrid>
+    </Grid>
+</Window>

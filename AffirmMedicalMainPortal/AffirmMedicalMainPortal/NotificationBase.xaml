@@ -1,0 +1,10 @@
+﻿<Window x:Class="AffirmMedicalMainPortal.NotificationBase"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NotificationBase" Height="300" Width="300">
+    <Grid Name="Content" Margin="10,0,0,0">
+        <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Stretch" Name="Options" VerticalAlignment="Top" Orientation="Vertical">
+            
+        </StackPanel>
+    </Grid>
+</Window>
